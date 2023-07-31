@@ -1,0 +1,87 @@
+// Colors
+$clr-primary-1: hsl(263, 55%, 52%);
+$clr-primary-2: hsl(217, 19%, 35%);
+$clr-primary-3: hsl(219, 29%, 14%);
+$clr-primary-4: hsl(0, 0%, 100%);
+
+$clr-neutral-1: hsl(0, 0%, 81%);
+$clr-neutral-2: hsl(210, 46%, 95%);
+
+// Globals
+body {
+  background-color: $clr-neutral-2;
+}
+
+// Cards
+%card-img-border {
+  border: 2px solid $clr-primary-1;
+}
+
+%text-small {
+  font-size: 0.8125rem;
+}
+
+.card {
+  &-img {
+    width: 2.5rem;
+  }
+
+  .card-title,
+  .edu-level,
+  .blockquote {
+    @extend %text-small;
+  }
+
+  &-headline {
+    font-size: 1.12rem;
+  }
+
+  &-1 {
+    --bg-position-percentage: 10%;
+    background-color: $clr-primary-1;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right var(--bg-position-percentage);
+
+    .card-img {
+      @extend %card-img-border;
+      border-color: lighten($clr-primary-1, 30%);
+    }
+
+    @include media-breakpoint-up(md) {
+      --bg-position-percentage: 20%;
+    }
+  }
+
+  &-2 {
+    background-color: $clr-primary-2;
+  }
+
+  &-3,
+  &-5 {
+    --bs-card-title-color: #{$clr-primary-3};
+
+    .edu-level,
+    .blockquote {
+      color: $clr-primary-3;
+    }
+
+    .card-headline {
+      color: $clr-primary-2;
+    }
+  }
+
+  &-4 {
+    background-color: $clr-primary-3;
+
+    .card-img {
+      @extend %card-img-border;
+    }
+  }
+
+  &-5 {
+    @include media-breakpoint-up(xl) {
+      grid-row: 1/3;
+    }
+  }
+}

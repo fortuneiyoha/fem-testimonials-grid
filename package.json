@@ -1,0 +1,22 @@
+{
+  "name": "fem-testimonials-grid",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "author": "Fortune Iyoha",
+  "license": "ISC",
+  "scripts": {
+    "watch:css": "postcss assets/css/style.css -o dist/style.min.css -w",
+    "build:css": "postcss assets/css/style.css -o dist/style.min.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^9.1.0",
+    "postcss-preset-env": "^9.1.0"
+  }
+}

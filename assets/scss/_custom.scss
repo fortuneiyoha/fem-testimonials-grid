@@ -39,7 +39,7 @@ body {
   &-1 {
     --bg-position-percentage: 10%;
     background-color: $clr-primary-1;
-    background-image: url(../images/bg-pattern-quotation.svg);
+    background-image: url(/assets/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position: top right var(--bg-position-percentage);
 
